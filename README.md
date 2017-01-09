@@ -1,6 +1,18 @@
-# idiomatic-ruby
-Idiomatic Ruby examples
+# Idiomatic-ruby
 
+## Table of Contents
+
+1. [Curly brackets and map](#curly-brackets-and-map)
+
+## Curly brackets and map
+```ruby
+cake_prices = [2, 3, 5]
+
+puts cake_prices.map { |p| p * 3.14 } # prints the cake prices
+puts cake_prices.map do |p| p * 3.14 end # puts(cake_prices.map) do |n| n * 10 end
+```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Contributing
 
