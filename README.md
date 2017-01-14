@@ -1,10 +1,13 @@
 # Idiomatic-ruby
 
+A collection of Ruby tricks and idioms.
+
 ## Table of Contents
 
 1. [Curly brackets and map](#curly-brackets-and-map)
 2. [Keyword arguments](#keyword-arguments)
 3. [Singleton class](#singleton-class)
+4. [Local variables on the go](#local-variables-on-the-go)
 
 ## Curly brackets and map
 
@@ -39,6 +42,14 @@ foo(true, bar: 'baz') # => 'baz'
 Similar names in the community: singleton class - metaclass - eigenclass
 
 The `class << foo` syntax opens up foo's singleton class, so you can specify methods for a *particular object*. For example `class << self` opens up self's singleton class, so that methods can be defined for the current self object.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Local variables on the go
+
+INFO: This is considered *bad practice*
+
+With `foo||=[]` you can use the foo variable on the go, without initializing it.
 
 **[⬆ back to top](#table-of-contents)**
 
