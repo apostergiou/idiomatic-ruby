@@ -69,7 +69,7 @@ The syntax lets you raise a class because it looks better, but actually instance
 
 **[⬆ back to top](#table-of-contents)**
 
-## Lireral constructors
+## Literal constructors
 
 | Class  | Example                |
 | ------ | -------                |
