@@ -57,9 +57,9 @@ With `foo||=[]` you can use the foo variable on the go, without initializing it.
 ## Exception raising
 
 ```ruby
-begin
+def foo
   raise ArgumentError
-  rescue => e
+rescue => e
   p e.class
 end
 ```
