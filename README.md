@@ -63,9 +63,17 @@ rescue => e
   p e.class
 end
 ```
-The syntax lets you raise a class because it looks better, but actually instances of the exception classes are raised.
+The syntax lets you raise a class because it looks better, but actually instances of the exception classes are raised. 
+>*Exceptions are classes, classes are constants, and constants can be namespaced*.
 
 **[⬆ back to top](#table-of-contents)**
+
+## Resources
+
+- [Stackoverflow ruby questions](http://stackoverflow.com/questions/tagged/ruby)
+- [The Well-Grounded Rubyist](http://www.goodreads.com/book/show/3892688-the-well-grounded-rubyist)
+- [Refactoring: Ruby Edition](http://www.goodreads.com/book/show/11560939-refactoring)
+- [Practical Object Oriented Design in Ruby](http://www.goodreads.com/book/show/13507787-practical-object-oriented-design-in-ruby)
 
 ## Contributing
 
