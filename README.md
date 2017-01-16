@@ -10,7 +10,7 @@ A collection of Ruby tricks and idioms.
 4. [Local variables on the go](#local-variables-on-the-go)
 5. [Exception raising](#exception-raising)
 6. [Literal constructors](#literal-constructors)
-7. [Here doc](here-doc)
+7. [Here doc](#here-doc)
 
 ## Curly brackets and map
 
