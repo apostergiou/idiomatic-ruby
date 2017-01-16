@@ -9,6 +9,7 @@ A collection of Ruby tricks and idioms.
 3. [Singleton class](#singleton-class)
 4. [Local variables on the go](#local-variables-on-the-go)
 5. [Exception raising](#exception-raising)
+6. [Literal constructors](#literal-constructors)
 
 ## Curly brackets and map
 
@@ -65,6 +66,21 @@ end
 ```
 The syntax lets you raise a class because it looks better, but actually instances of the exception classes are raised. 
 >*Exceptions are classes, classes are constants, and constants can be namespaced*.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Lireral constructors
+
+| Class  | Example                |
+| ------ | -------                |
+| String | `'foo'`                |
+| Symbol | `:symbol`              |
+|        | `:"symbol_with_space"` |
+| Array  | `[1, 2, 3]`            |
+| Hash   | `{ foo: 1, bar: 2 }`   |
+| Range  | `1..10`                |
+| Regexp | `/regular/`            |
+| Lambda | `-> (x, y) { x * y }`  |
 
 **[⬆ back to top](#table-of-contents)**
 
