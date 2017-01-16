@@ -8,6 +8,7 @@ A collection of Ruby tricks and idioms.
 2. [Keyword arguments](#keyword-arguments)
 3. [Singleton class](#singleton-class)
 4. [Local variables on the go](#local-variables-on-the-go)
+5. [Exception raising](#exception-raising)
 
 ## Curly brackets and map
 
@@ -50,6 +51,19 @@ The `class << foo` syntax opens up foo's singleton class, so you can specify met
 INFO: This is considered *bad practice*
 
 With `foo||=[]` you can use the foo variable on the go, without initializing it.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Exception raising
+
+```ruby
+begin
+  raise ArgumentError
+  rescue => e
+  p e.class
+end
+```
+The syntax lets you raise a class because it looks better, but actually instances of the exception classes are raised.
 
 **[⬆ back to top](#table-of-contents)**
 
