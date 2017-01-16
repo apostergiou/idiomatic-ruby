@@ -10,6 +10,7 @@ A collection of Ruby tricks and idioms.
 4. [Local variables on the go](#local-variables-on-the-go)
 5. [Exception raising](#exception-raising)
 6. [Literal constructors](#literal-constructors)
+7. [Here doc](here-doc)
 
 ## Curly brackets and map
 
@@ -81,6 +82,28 @@ The syntax lets you raise a class because it looks better, but actually instance
 | Range  | `1..10`                |
 | Regexp | `/regular/`            |
 | Lambda | `-> (x, y) { x * y }`  |
+
+**[⬆ back to top](#table-of-contents)**
+
+## Here doc
+
+```ruby
+text = <<EOM
+Foo.
+Bar.
+EOM
+
+p text # => "Foo.\nBar.\n"
+```
+
+```ruby
+array = [1, 2, <<EOM, 3]
+Foo.
+Bar.
+EOM
+
+p array # => [1, 2, "Foo.\nBar.\n", 3]
+```
 
 **[⬆ back to top](#table-of-contents)**
 
