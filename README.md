@@ -12,6 +12,7 @@ A collection of Ruby tricks and idioms.
 6. [Literal constructors](#literal-constructors)
 7. [Here doc](#here-doc)
 8. [Syntactic sugar](#syntactic-sugar)
+9. [Set](#set)
 
 ## Curly brackets and map
 
@@ -115,6 +116,23 @@ p array # => [1, 2, "Foo.\nBar.\n", 3]
 ```ruby
 a = []
 a[0, 1] = 'foo', 'bar' # => a.[]=(0, 1,['foo', 'bar'])
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Set
+
+> Set implements a collection of unordered values with no duplicates. This is a hybrid of Array's intuitive inter-operation facilities and Hash's fast lookup.
+
+```ruby
+require 'set'
+s1 = Set.new [1, 2]                   # -> #<Set: {1, 2}>
+s2 = [1, 2].to_set                    # -> #<Set: {1, 2}>
+s1 == s2                              # -> true
+s1.add("foo")                         # -> #<Set: {1, 2, "foo"}>
+s1.merge([2, 6])                      # -> #<Set: {1, 2, "foo", 6}>
+s1.subset? s2                         # -> false
+s2.subset? s1                         # -> true
 ```
 
 **[⬆ back to top](#table-of-contents)**
