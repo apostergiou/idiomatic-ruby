@@ -11,6 +11,7 @@ A collection of Ruby tricks and idioms.
 5. [Exception raising](#exception-raising)
 6. [Literal constructors](#literal-constructors)
 7. [Here doc](#here-doc)
+8. [Syntactic sugar](#syntactic-sugar)
 
 ## Curly brackets and map
 
@@ -103,6 +104,17 @@ Bar.
 EOM
 
 p array # => [1, 2, "Foo.\nBar.\n", 3]
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Syntactic sugar
+
+* Array
+
+```ruby
+a = []
+a[0, 1] = 'foo', 'bar' # => a.[]=(0, 1,['foo', 'bar'])
 ```
 
 **[⬆ back to top](#table-of-contents)**
