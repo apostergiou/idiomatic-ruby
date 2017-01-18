@@ -14,6 +14,7 @@ A collection of Ruby tricks and idioms.
 8.  [Syntactic sugar](#syntactic-sugar)
 9.  [Set](#set)
 10. [Hash](#hash)
+11. [Enumerators vs Iterators](#inumerators-vs-iterators)
 
 ## Curly brackets and map
 
@@ -155,6 +156,12 @@ hash = { foo: 1, bar: 2 }
 
 hash.each { |key, value| puts key, value }
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Enumerators vs Iterators
+
+Enumerators aren't the same as Iterators. An iterator is a method that yields one or more values to a code block. An enumerator is an object.
 
 **[⬆ back to top](#table-of-contents)**
 
