@@ -14,7 +14,7 @@ A collection of Ruby tricks and idioms.
 8.  [Syntactic sugar](#syntactic-sugar)
 9.  [Set](#set)
 10. [Hash](#hash)
-11. [Enumerators vs Iterators](#inumerators-vs-iterators)
+11. [Enumerators vs Iterators](#enumerators-vs-iterators)
 
 ## Curly brackets and map
 
@@ -113,7 +113,7 @@ p array # => [1, 2, "Foo.\nBar.\n", 3]
 
 ## Syntactic sugar
 
-* Array
+* <a name="Array"></a>Array<sup>[[link](#Array)]</sup>
 
 ```ruby
 a = []
