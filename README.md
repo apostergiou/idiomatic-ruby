@@ -113,7 +113,7 @@ p array # => [1, 2, "Foo.\nBar.\n", 3]
 
 ## Syntactic sugar
 
-* <a name="Array"></a>Array<sup>[[link](#Array)]</sup>
+* <a name="syntactic-sugar-array"></a>Array<sup>[[link](#syntactic-sugar-array)]</sup>
 
 ```ruby
 a = []
