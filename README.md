@@ -4,15 +4,16 @@ A collection of Ruby tricks and idioms.
 
 ## Table of Contents
 
-1. [Curly brackets and map](#curly-brackets-and-map)
-2. [Keyword arguments](#keyword-arguments)
-3. [Singleton class](#singleton-class)
-4. [Local variables on the go](#local-variables-on-the-go)
-5. [Exception raising](#exception-raising)
-6. [Literal constructors](#literal-constructors)
-7. [Here doc](#here-doc)
-8. [Syntactic sugar](#syntactic-sugar)
-9. [Set](#set)
+1.  [Curly brackets and map](#curly-brackets-and-map)
+2.  [Keyword arguments](#keyword-arguments)
+3.  [Singleton class](#singleton-class)
+4.  [Local variables on the go](#local-variables-on-the-go)
+5.  [Exception raising](#exception-raising)
+6.  [Literal constructors](#literal-constructors)
+7.  [Here doc](#here-doc)
+8.  [Syntactic sugar](#syntactic-sugar)
+9.  [Set](#set)
+10. [Hash](#hash)
 
 ## Curly brackets and map
 
@@ -133,6 +134,26 @@ s1.add("foo")                         # -> #<Set: {1, 2, "foo"}>
 s1.merge([2, 6])                      # -> #<Set: {1, 2, "foo", 6}>
 s1.subset? s2                         # -> false
 s2.subset? s1                         # -> true
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Hash
+
+* Hash iteration with each
+
+```ruby
+hash = { foo: 1, bar: 2 }
+
+hash.each { |pair| puts pair}
+```
+
+`pair[0]` contains the key and `pair[1]` the value. Nevertheless, it is common to iterate  the hash with key and value declared explicitly:
+
+```ruby
+hash = { foo: 1, bar: 2 }
+
+hash.each { |key, value| puts key, value }
 ```
 
 **[⬆ back to top](#table-of-contents)**
