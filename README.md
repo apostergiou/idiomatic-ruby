@@ -15,6 +15,7 @@ A collection of Ruby tricks and idioms.
 9.  [Set](#set)
 10. [Hash](#hash)
 11. [Enumerators vs Iterators](#enumerators-vs-iterators)
+12. [Regexp](#regexp)
 
 ## Curly brackets and map
 
@@ -162,6 +163,32 @@ hash.each { |key, value| puts key, value }
 ## Enumerators vs Iterators
 
 Enumerators aren't the same as Iterators. An iterator is a method that yields one or more values to a code block. An enumerator is an object.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Regexp
+
+In addition to the match method, Ruby also features a pattern-matching operator,
+`=~` (equal sign and tilde):
+
+```ruby
+  puts 'Match!' if /foo/ =~ 'foo bar'
+  puts 'Match!' if 'foo bar' =~ /foo/
+```
+
+Where `match` and `=~` differ from each other is in what they return when there is
+a match:
+  - `=~` returns the numerical index of the character in the string where the match started
+  - `match` returns an instance of the class MatchData
+
+For example:
+
+```ruby
+  'foo bar foomobile' =~ /foo/      # => 0
+  /foo/.match('foo bar foomobile')  # => #<MatchData "foo">
+```
+
+For a detailed introduction to regular expressions consult chapter 11(`regexp`) from the book `Well-Grounded Rubyist`.
 
 **[⬆ back to top](#table-of-contents)**
 
