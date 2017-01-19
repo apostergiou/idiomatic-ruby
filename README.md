@@ -171,6 +171,7 @@ Enumerators aren't the same as Iterators. An iterator is a method that yields on
 - [The Well-Grounded Rubyist](http://www.goodreads.com/book/show/3892688-the-well-grounded-rubyist)
 - [Refactoring: Ruby Edition](http://www.goodreads.com/book/show/11560939-refactoring)
 - [Practical Object Oriented Design in Ruby](http://www.goodreads.com/book/show/13507787-practical-object-oriented-design-in-ruby)
+- [Byebug](https://github.com/deivid-rodriguez/byebug/blob/master/GUIDE.md)
 
 ## Contributing
 
