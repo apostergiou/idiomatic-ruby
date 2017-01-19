@@ -54,7 +54,7 @@ The `class << foo` syntax opens up foo's singleton class, so you can specify met
 
 ## Local variables on the go
 
-INFO: This is considered *bad practice*
+**Note**: This is considered bad practice.
 
 With `foo||=[]` you can use the foo variable on the go, without initializing it.
 
