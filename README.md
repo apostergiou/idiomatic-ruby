@@ -16,6 +16,7 @@ A collection of Ruby tricks and idioms.
 10. [Hash](#hash)
 11. [Enumerators vs Iterators](#enumerators-vs-iterators)
 12. [Regexp](#regexp)
+13. [Method chaining](#method-chaining)
 
 ## Curly brackets and map
 
@@ -189,6 +190,39 @@ For example:
 ```
 
 For a detailed introduction to regular expressions consult chapter 11(`regexp`) from the book `Well-Grounded Rubyist`.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Method Chaining
+
+Return `self` in methods that you want to enable chaining.
+
+For example:
+
+```ruby
+class FooBar
+  def options
+    @options ||= []
+  end
+  
+  def foo(args)
+    options << args
+    self
+  end
+  
+  def bar(args)
+    options << args
+  end
+end
+
+FooBar.new().foo(1).foo(2)        => #<FooBar:0x0055a70e45f398 @options=[1, 2]>
+FooBar.new().foo(1).foo(2).bar(3) => [1, 2, 3]
+
+# We cannot chain #bar
+
+FooBar.new().foo(1).foo(2).bar(3).bar(4) => NoMethodError: undefined method `bar' for [1, 2, 3]:Array
+FooBar.new().foo(1).foo(2).bar(3).foo(1) => NoMethodError: undefined method `foo' for [1, 2, 3]:Array
+```
 
 **[⬆ back to top](#table-of-contents)**
 
