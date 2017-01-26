@@ -17,6 +17,7 @@ A collection of Ruby tricks and idioms.
 11. [Enumerators vs Iterators](#enumerators-vs-iterators)
 12. [Regexp](#regexp)
 13. [Method chaining](#method-chaining)
+14. [Range to array](#range-to-array)
 
 ## Curly brackets and map
 
@@ -222,6 +223,18 @@ FooBar.new().foo(1).foo(2).bar(3) # => [1, 2, 3]
 
 FooBar.new().foo(1).foo(2).bar(3).bar(4) # => NoMethodError: undefined method `bar' for [1, 2, 3]:Array
 FooBar.new().foo(1).foo(2).bar(3).foo(1) # => NoMethodError: undefined method `foo' for [1, 2, 3]:Array
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Range to array
+
+```ruby
+Array(1..5)  # => [1, 2, 3, 4, 5]
+
+(1..5).to_a  # => [1, 2, 3, 4, 5]
+
+[*1..5]      # => [1, 2, 3, 4, 5]
 ```
 
 **[⬆ back to top](#table-of-contents)**
