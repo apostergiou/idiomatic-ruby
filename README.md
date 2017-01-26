@@ -215,13 +215,13 @@ class FooBar
   end
 end
 
-FooBar.new().foo(1).foo(2)        => #<FooBar:0x0055a70e45f398 @options=[1, 2]>
-FooBar.new().foo(1).foo(2).bar(3) => [1, 2, 3]
+FooBar.new().foo(1).foo(2)        # => #<FooBar:0x0055a70e45f398 @options=[1, 2]>
+FooBar.new().foo(1).foo(2).bar(3) # => [1, 2, 3]
 
 # We cannot chain #bar
 
-FooBar.new().foo(1).foo(2).bar(3).bar(4) => NoMethodError: undefined method `bar' for [1, 2, 3]:Array
-FooBar.new().foo(1).foo(2).bar(3).foo(1) => NoMethodError: undefined method `foo' for [1, 2, 3]:Array
+FooBar.new().foo(1).foo(2).bar(3).bar(4) # => NoMethodError: undefined method `bar' for [1, 2, 3]:Array
+FooBar.new().foo(1).foo(2).bar(3).foo(1) # => NoMethodError: undefined method `foo' for [1, 2, 3]:Array
 ```
 
 **[⬆ back to top](#table-of-contents)**
