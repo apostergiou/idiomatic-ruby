@@ -18,6 +18,7 @@ A collection of Ruby tricks and idioms.
 12. [Regexp](#regexp)
 13. [Method chaining](#method-chaining)
 14. [Range to array](#range-to-array)
+15. [Block arguments](#block-arguments)
 
 ## Curly brackets and map
 
@@ -194,7 +195,7 @@ For a detailed introduction to regular expressions consult chapter 11(`regexp`) 
 
 **[⬆ back to top](#table-of-contents)**
 
-## Method Chaining
+## Method chaining
 
 Return `self` in methods that you want to enable chaining.
 
@@ -235,6 +236,25 @@ Array(1..5)  # => [1, 2, 3, 4, 5]
 (1..5).to_a  # => [1, 2, 3, 4, 5]
 
 [*1..5]      # => [1, 2, 3, 4, 5]
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Block arguments
+
+Two common ways to pass a block to a method are:
+
+```ruby
+def foo(number, &block)
+  p number
+  block.call
+end
+
+foo(1) { p 'bar' }
+
+foo 1 do
+  p 'bar'
+end
 ```
 
 **[⬆ back to top](#table-of-contents)**
