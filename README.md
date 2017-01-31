@@ -19,6 +19,7 @@ A collection of Ruby tricks and idioms.
 13. [Method chaining](#method-chaining)
 14. [Range to array](#range-to-array)
 15. [Block arguments](#block-arguments)
+16. [dup vs clone](#dup-vs-clone)
 
 ## Curly brackets and map
 
@@ -260,6 +261,14 @@ foo(1) do
   p 'bar'
 end
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## dup vs clone
+
+- `clone` will copy the Singleton class
+- `clone` will preserve the frozen state of an object
+
 
 **[⬆ back to top](#table-of-contents)**
 
