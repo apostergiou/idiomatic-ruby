@@ -242,7 +242,7 @@ Array(1..5)  # => [1, 2, 3, 4, 5]
 
 ## Block arguments
 
-Two common ways to pass a block to a method are:
+Some common ways to pass a block to a method are:
 
 ```ruby
 def foo(number, &block)
@@ -253,6 +253,10 @@ end
 foo(1) { p 'bar' }
 
 foo 1 do
+  p 'bar'
+end
+
+foo(1) do
   p 'bar'
 end
 ```
