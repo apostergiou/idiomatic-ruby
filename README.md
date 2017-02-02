@@ -23,6 +23,7 @@ A collection of Ruby idioms and patterns.
 17. [Struct inheritance](https://github.com/apostergiou/idiomatic-ruby/blob/master/struct_inheritance.rb)
 18. [Binary ambersand](#binary-ambersand)
 19. [Inline rescue](#inline-rescue)
+20. [alias vs alias_method](#alias-vs-alias_method)
 
 ## Curly brackets and map
 
@@ -299,6 +300,13 @@ foo = { bar: 1 }
 foo[:bar].capitalize # => NoMethodError: undefined method `capitalize' for 1:Fixnum
 foo[:bar].capitalize rescue 'I cannot capitalize this!!' # => "I cannot capitalize this!!"
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## alias vs alias_method
+
+- Prefer `alias_method` when aliasing methods at runtime
+- Prefer `alias` when aliasing methods that are resolved at the time the alias is defined(lexical class scope)
 
 **[⬆ back to top](#table-of-contents)**
 
