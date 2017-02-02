@@ -20,6 +20,7 @@ A collection of Ruby idioms and patterns.
 14. [Range to array](#range-to-array)
 15. [Block arguments](#block-arguments)
 16. [dup vs clone](#dup-vs-clone)
+17. [Struct inheritance](https://github.com/apostergiou/idiomatic-ruby/blob/master/struct_inheritance.rb)
 
 ## Curly brackets and map
 
