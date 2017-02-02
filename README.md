@@ -317,6 +317,7 @@ foo[:bar].capitalize rescue 'I cannot capitalize this!!' # => "I cannot capitali
 - [Refactoring: Ruby Edition](http://www.goodreads.com/book/show/11560939-refactoring)
 - [Practical Object Oriented Design in Ruby](http://www.goodreads.com/book/show/13507787-practical-object-oriented-design-in-ruby)
 - [Byebug](https://github.com/deivid-rodriguez/byebug/blob/master/GUIDE.md)
+- [Styleguide](https://github.com/bbatsov/ruby-style-guide)
 
 ## Contributing
 
