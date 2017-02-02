@@ -21,7 +21,8 @@ A collection of Ruby idioms and patterns.
 15. [Block arguments](#block-arguments)
 16. [dup vs clone](#dup-vs-clone)
 17. [Struct inheritance](https://github.com/apostergiou/idiomatic-ruby/blob/master/struct_inheritance.rb)
-18. [Binary Ambersand](#binary-ambersand)
+18. [Binary ambersand](#binary-ambersand)
+19. [Inline rescue](#inline-rescue)
 
 ## Curly brackets and map
 
@@ -284,6 +285,19 @@ For example, you can use this operator to check for even numbers:
 def is_even?(number)
   number & 1 == 0
 end
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Inline rescue
+
+`rescue` has a single line form.
+
+```ruby
+foo = { bar: 1 }
+
+foo[:bar].capitalize # => NoMethodError: undefined method `capitalize' for 1:Fixnum
+foo[:bar].capitalize rescue 'I cannot capitalize this!!' # => "I cannot capitalize this!!"
 ```
 
 **[⬆ back to top](#table-of-contents)**
