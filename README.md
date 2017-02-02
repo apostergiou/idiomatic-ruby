@@ -1,6 +1,6 @@
 # Idiomatic-ruby
 
-A collection of Ruby tricks and idioms.
+A collection of Ruby idioms and patterns.
 
 ## Table of Contents
 
