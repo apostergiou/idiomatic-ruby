@@ -21,6 +21,7 @@ A collection of Ruby idioms and patterns.
 15. [Block arguments](#block-arguments)
 16. [dup vs clone](#dup-vs-clone)
 17. [Struct inheritance](https://github.com/apostergiou/idiomatic-ruby/blob/master/struct_inheritance.rb)
+18. [Binary Ambersand](#binary-ambersand)
 
 ## Curly brackets and map
 
@@ -270,6 +271,20 @@ end
 - `clone` will copy the Singleton class
 - `clone` will preserve the frozen state of an object
 
+**[⬆ back to top](#table-of-contents)**
+
+## Binary ambersand
+
+The single ambersand(bitwise AND) in Ruby is the binary equivalent of boolean AND. e.g. `100 & 111 = 100`.
+
+If you use the operator with an Integer then it converts the integer to its binary representation and performs the operation.
+For example, you can use this operator to check for even numbers:
+
+```ruby
+def is_even?(number)
+  number & 1 == 0
+end
+```
 
 **[⬆ back to top](#table-of-contents)**
 
