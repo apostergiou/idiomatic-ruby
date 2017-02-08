@@ -25,6 +25,7 @@ A collection of Ruby idioms and patterns.
 19. [Inline rescue](#inline-rescue)
 20. [alias vs alias_method](#alias-vs-alias_method)
 21. [block vs hash](#block-vs-hash)
+22. [Null object pattern](#null-object-pattern)
 
 ## Curly brackets and map
 
@@ -361,6 +362,23 @@ puts { key: 'value' } # => results in syntax error because Ruby thinks {} is a b
 puts {{ key: 'value' }}
 puts key: 'value' # => the curly bracket are redundant, so we can drop them
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Null object pattern
+
+In object-oriented computer programming, a Null Object is an object with no referenced value or with defined neutral ("null") behavior. The Null Object design pattern describes the uses of such objects and their behavior (or lack thereof).
+
+Read more in [wikipedia](https://en.wikipedia.org/wiki/Null_Object_pattern).
+
+`nil` values force us to use conditionals to check if a variable is nil. The Null Object pattern is based in the [Special Case pattern](https://martinfowler.com/eaaCatalog/specialCase.html) and can be used to clean up some code.
+
+The null object pattern is relatively simple:
+
+- Identify a recurring special case where you check for nil values
+- Represent that special case as an object in its own right
+
+Generally, anytime we are checking for the same condition over and over again, that's an indication that we should think of creating a new Object for that condition.
 
 **[⬆ back to top](#table-of-contents)**
 
