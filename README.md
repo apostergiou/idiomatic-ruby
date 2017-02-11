@@ -166,6 +166,8 @@ hash = { foo: 1, bar: 2 }
 hash.each { |key, value| puts key, value }
 ```
 
+NOTE: As of Ruby 1.9, the order of putting things into Hash is maintained.
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Enumerators vs Iterators
