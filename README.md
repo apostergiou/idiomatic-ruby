@@ -247,7 +247,7 @@ Array(1..5)  # => [1, 2, 3, 4, 5]
 
 ## Block arguments
 
-Some common ways to pass a block to a method are:
+- Some common ways to pass a block to a method are:
 
 ```ruby
 def foo(number, &block)
@@ -265,6 +265,23 @@ foo(1) do
   p 'bar'
 end
 ```
+
+- There are two ways to incorporate blocks
+  - implicit
+  ```ruby
+  def block_method
+    return unless block_given?
+    yield
+  end
+  ```
+  - explicit
+  ```ruby
+  def block_method(&the_block)
+    return if the_block.nil?
+    the_block.call
+  end
+  ```
+The explicit way is more direct.
 
 **[⬆ back to top](#table-of-contents)**
 
