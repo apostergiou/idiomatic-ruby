@@ -24,6 +24,7 @@ A collection of Ruby idioms and patterns.
 18. [Binary ambersand](#binary-ambersand)
 19. [Inline rescue](#inline-rescue)
 20. [alias vs alias_method](#alias-vs-alias_method)
+21. [block vs hash](#block-vs-hash)
 
 ## Curly brackets and map
 
@@ -326,6 +327,25 @@ foo[:bar].capitalize rescue 'I cannot capitalize this!!' # => "I cannot capitali
 
 - Prefer `alias_method` when aliasing methods at runtime
 - Prefer `alias` when aliasing methods that are resolved at the time the alias is defined(lexical class scope)
+
+**[⬆ back to top](#table-of-contents)**
+
+## block vs hash
+
+A common confusion is the following:
+
+```ruby
+foo_hash = { key: 'value' }
+
+puts foo_hash # => works as expected
+
+puts { key: 'value' } # => results in syntax error because Ruby thinks {} is a block
+
+#
+# Workarounds
+puts {{ key: 'value' }}
+puts key: 'value' # => the curly bracket are redundant, so we can drop them
+```
 
 **[⬆ back to top](#table-of-contents)**
 
