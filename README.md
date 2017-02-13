@@ -82,6 +82,21 @@ end
 The syntax lets you raise a class because it looks better, but actually instances of the exception classes are raised. 
 >*Exceptions are classes, classes are constants, and constants can be namespaced*.
 
+From the style guide:
+```ruby
+raise SomeException, 'message'
+# Consistent with `raise SomeException, 'message', backtrace`.
+
+# signals a RuntimeError by default
+raise 'message'
+```
+
+Calling `raise` without passing any arguments results in Ruby re-raising the last exception.
+
+>Never rescue `Exception`, instead rescue the lowest class in the exception hierarchy you need to rescue. `Exception` will catch syntax and other compiler issues, which might result in deploying a broken application.
+
+http://stackoverflow.com/a/7250985/2443758
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Literal constructors
