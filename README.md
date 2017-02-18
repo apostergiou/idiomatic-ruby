@@ -26,6 +26,7 @@ A collection of Ruby idioms and patterns.
 20. [alias vs alias_method](#alias-vs-alias_method)
 21. [block vs hash](#block-vs-hash)
 22. [Null object pattern](#null-object-pattern)
+23. [Constant scope](#constant-scope)
 
 ## Curly brackets and map
 
@@ -381,6 +382,28 @@ The null object pattern is relatively simple:
 Generally, anytime we are checking for the same condition over and over again, that's an indication that we should think of creating a new Object for that condition.
 
 **[⬆ back to top](#table-of-contents)**
+
+## Constant scope
+
+Constants are any reference that begins with uppercase, including classes and modules. The constant scope rules are different than variable scope rules.
+
+```ruby
+module ScopeModule
+
+  FOO = 'Outer foo'
+  
+  class ScopeClass
+    p FOO # => Outer foo
+    FOO = 'Inner foo'
+    p FOO # => Inner foo
+  end
+  
+  p FOO # => Outer foo
+end
+```
+
+**[⬆ back to top](#table-of-contents)**
+
 
 ## Resources
 
