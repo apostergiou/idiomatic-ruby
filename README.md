@@ -27,6 +27,7 @@ A collection of Ruby idioms and patterns.
 21. [block vs hash](#block-vs-hash)
 22. [Null object pattern](#null-object-pattern)
 23. [Constant scope](#constant-scope)
+24. [Block variables](#block-variables)
 
 ## Curly brackets and map
 
@@ -401,6 +402,28 @@ module ScopeModule
   p FOO # => Outer foo
 end
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Block variables
+
+You can avoid overriding variables inside a block with this technique:
+
+```ruby
+arr = [1, 2]
+foo = 42
+
+arr.each do |bar;foo|
+ foo = 10
+ p bar, foo
+end
+
+# it will print 1, 10 and 2, 10
+
+p foo # => 42
+```
+
+Nevertheless, it is better to use proper variables names than the above technique.
 
 **[⬆ back to top](#table-of-contents)**
 
