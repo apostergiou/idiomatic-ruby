@@ -28,6 +28,7 @@ A collection of Ruby idioms and patterns.
 22. [Null object pattern](#null-object-pattern)
 23. [Constant scope](#constant-scope)
 24. [Block variables](#block-variables)
+25. [Method missing](#method-missing)
 
 ## Curly brackets and map
 
@@ -424,6 +425,28 @@ p foo # => 42
 ```
 
 Nevertheless, it is better to use proper variables names than the above technique.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Method missing
+
+`method_missing` will capture any method call for which the receiver has no predefined method. You can override this method to add custom functionality.
+
+```ruby
+class ComputerVoice
+  def speak(str)
+    p "Hello #{str}!"
+  end
+  
+  def method_missing(method_id)
+    speak method_id
+  end
+end
+
+foo = ComputerVoice.new
+foo.what # => "Hello what!"
+foo.asd  # => "Hello asd!"
+```
 
 **[⬆ back to top](#table-of-contents)**
 
