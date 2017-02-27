@@ -1,5 +1,3 @@
-# Everyday singleton examples
-
 #
 # Class methods
 #
