@@ -1,9 +1,13 @@
 # Ruby closures
 
 There are 4 types of closures in Ruby:
+
 1) block
+
 2) proc
+
 3) lambda
+
 4) method
 
 A simple explanation of closures: Closures are ways of grouping and packaging code we want to run at a later point.
