@@ -14,17 +14,17 @@ A simple explanation of closures: Closures are ways of grouping and packaging co
 
 ## Differences between Blocks and Procs
 
-1. Procs are objects
+- Procs are objects
 
 This lets us assign them to variables, call methods on them and they can also return self.
 
-2. You can pass multiple procs to methods but only one block
+- You can pass multiple procs to methods but only one block
 
 ## Differences between Procs and Lambdas
 
 Lambdas and procs are both Proc objects.
 
-1. Lambdas check the number of arguments
+- Lambdas check the number of arguments
 
 ```ruby
 l = lambda { |foo| p foo }
@@ -36,7 +36,7 @@ p.call(1) # => prints 1
 p.call(1, 2) # => returns nil
 ```
 
-2. Differences regarding the `return` keyword
+- Differences regarding the `return` keyword
 
 ## Methods as closures
 
