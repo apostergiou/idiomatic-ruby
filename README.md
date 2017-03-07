@@ -482,6 +482,7 @@ In many cases it is an alias for `==`.
 - [Practical Object Oriented Design in Ruby](http://www.goodreads.com/book/show/13507787-practical-object-oriented-design-in-ruby)
 - [Byebug](https://github.com/deivid-rodriguez/byebug/blob/master/GUIDE.md)
 - [Styleguide](https://github.com/bbatsov/ruby-style-guide)
+- [Blackbytes](http://www.blackbytes.info)
 
 ## Contributing
 
