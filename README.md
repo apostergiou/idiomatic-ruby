@@ -29,6 +29,7 @@ A collection of Ruby idioms and patterns.
 23. [Constant scope](#constant-scope)
 24. [Block variables](#block-variables)
 25. [Method missing](#method-missing)
+26. [Equality](#equality)
 
 ## Curly brackets and map
 
@@ -450,6 +451,28 @@ foo.asd  # => "Hello asd!"
 
 **[⬆ back to top](#table-of-contents)**
 
+## Equality
+
+- Double equals
+
+`'bar' == 'bar'` works because the String class implements a `==` method that knows how to compare strings.
+
+You can define what it means to be equal by implementing a `==` method
+
+e.g.
+```ruby
+def ==(input)
+  self.attribute_1 > input.attribute_1 &&
+  self.name == input.name
+end
+```
+
+- Triple equals
+
+Triple equals `===` means different things depending on the class which implements the `===` method.
+In many cases it is an alias for `==`.
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Resources
 
