@@ -30,6 +30,7 @@ A collection of Ruby idioms and patterns.
 24. [Block variables](#block-variables)
 25. [Method missing](#method-missing)
 26. [Equality](#equality)
+27. [Printing](#printing)
 
 ## Curly brackets and map
 
@@ -471,6 +472,25 @@ end
 
 Triple equals `===` means different things depending on the class which implements the `===` method.
 In many cases it is an alias for `==`.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Printing
+
+Let's suppose we want to nicely format the console output.
+
+```ruby
+hash_data = {}
+hash_data[:foo] = 'Hello'
+hash_data[:foobar] = 'World'
+hash_data[:foobarfoo] = 'Hello World!'
+
+longest_key = hash_data.keys.max_by(&:length)
+
+hash_data.each do |k, v|
+  printf "%s # %s \n", k.to_s.ljust(longest_key.length), v
+end
+```
 
 **[⬆ back to top](#table-of-contents)**
 
