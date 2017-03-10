@@ -18,6 +18,10 @@ A simple explanation of closures: Closures are ways of grouping and packaging co
 
 This lets us assign them to variables, call methods on them and they can also return self.
 
+- Blocks are not objects
+
+Blocks are tuned to be performant. They neither have a callable interface nor they respond to any methods.
+
 - You can pass multiple procs to methods but only one block
 
 ## Differences between Procs and Lambdas
