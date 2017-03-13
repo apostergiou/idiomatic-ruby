@@ -31,6 +31,7 @@ A collection of Ruby idioms and patterns.
 25. [Method missing](#method-missing)
 26. [Equality](#equality)
 27. [Printing](#printing)
+28. [Class variable access](#class-variable-access)
 
 ## Curly brackets and map
 
@@ -516,6 +517,26 @@ longest_key = hash_data.keys.max_by(&:length)
 hash_data.each do |k, v|
   printf "%s # %s \n", k.to_s.ljust(longest_key.length), v
 end
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Class variable access
+
+A way to access class variables, is the following:
+
+```ruby
+module Foo
+  extend self
+  def index
+    @bar = :hello
+  end
+end
+
+Foo.index # => :hello
+
+Foo.class_eval('@bar')    # => :hello
+Foo.class_eval('@foobar') # => :nil
 ```
 
 **[⬆ back to top](#table-of-contents)**
