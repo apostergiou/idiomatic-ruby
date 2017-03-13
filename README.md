@@ -32,6 +32,7 @@ A collection of Ruby idioms and patterns.
 26. [Equality](#equality)
 27. [Printing](#printing)
 28. [Class variable access](#class-variable-access)
+29. [tap](#tap)
 
 ## Curly brackets and map
 
@@ -537,6 +538,21 @@ Foo.index # => :hello
 
 Foo.class_eval('@bar')    # => :hello
 Foo.class_eval('@foobar') # => :nil
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Tap
+
+`tap` executes a code block, yielding the receiver to the block and returns the receiver.
+
+```ruby
+foo = 'Hello World'.tap { |s| p s.upcase }.reverse
+
+# Prints "HELLO WORLD"
+# => "dlroW olleH"
+
+p foo # Prints "dlroW olleH"
 ```
 
 **[⬆ back to top](#table-of-contents)**
