@@ -9,6 +9,18 @@ class Foo
 
   class << self
     def two () 2 end
+
+    <<-DOC
+      Inside the Foo's body self is Foo. So the above is the same as:
+
+      class Foo; end
+      class << Foo
+        def two () 2 end
+      end
+
+      Or technically you could also just replace self with Foo inside the body,
+      but this is not used usually.
+    DOC
   end
 
   def three () 3 end
