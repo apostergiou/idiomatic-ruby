@@ -1,4 +1,4 @@
-# Idiomatic-ruby
+# :computer: Idiomatic-ruby
 
 A collection of Ruby idioms and patterns.
 
