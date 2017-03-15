@@ -374,6 +374,20 @@ foo[:bar].capitalize rescue 'I cannot capitalize this!!' # => "I cannot capitali
 
 ## alias vs alias_method
 
+You can create an alias for a method in two ways:
+
+```ruby
+class Bar
+  alias old_foo foo
+end
+
+class Bar
+  alias_method :old_foo, :foo
+end
+```
+
+The arguments to `alias` don't have a comma between them. Tha's because `alias` is a keyword. In comparison `alias_method` is a method, so it needs objects rather than bare method names as its arguments. It can take symbols or strings.
+
 - Prefer `alias_method` when aliasing methods at runtime
 - Prefer `alias` when aliasing methods that are resolved at the time the alias is defined(lexical class scope)
 
