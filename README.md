@@ -100,11 +100,42 @@ raise SomeException, 'message'
 raise 'message'
 ```
 
-Calling `raise` without passing any arguments results in Ruby re-raising the last exception.
+Calling `raise` without passing any arguments results in Ruby re-raising the last [exception](http://stackoverflow.com/a/7250985/2443758).
 
 >Never rescue `Exception`, instead rescue the lowest class in the exception hierarchy you need to rescue. `Exception` will catch syntax and other compiler issues, which might result in deploying a broken application.
 
-http://stackoverflow.com/a/7250985/2443758
+To summarize:
+
+- Bad
+
+```ruby
+begin
+  something()
+rescue Exception => e
+  ...
+end
+```
+
+The above code will rescue every exception. e.g. You will suppress Ruby's signals to the operating system.
+
+- Good
+
+```ruby
+begin
+  something()
+rescue => e
+  ...
+end
+
+# If you don't specify any exception class Ruby assumes you mean StandartError.
+begin
+  something()
+rescue StandartError => e
+  ...
+end
+
+# A better way is to rescue specific errors e.g. rescue IOError
+```
 
 **[⬆ back to top](#table-of-contents)**
 
