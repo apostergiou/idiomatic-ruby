@@ -33,6 +33,7 @@ A collection of Ruby idioms and patterns.
 27. [Printing](#printing)
 28. [Class variable access](#class-variable-access)
 29. [tap](#tap)
+30. [Environment variables](#environment-variables)
 
 ## Curly brackets and map
 
@@ -568,6 +569,24 @@ foo = 'Hello World'.tap { |s| p s.upcase }.reverse
 
 p foo # Prints "dlroW olleH"
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Environment variables
+
+You can set the environment variable in a terminal:
+
+```shell
+export FOO='test'
+```
+
+Now you have access to it in your irb:
+
+```ruby
+ENV['FOO'] # => "test"
+```
+
+> Setting environment variables in a terminal will last for that session only. To set it permanently add the command to your `~/.profile` file of your machine.
 
 **[⬆ back to top](#table-of-contents)**
 
