@@ -34,6 +34,7 @@ A collection of Ruby idioms and patterns.
 28. [Class variable access](#class-variable-access)
 29. [tap](#tap)
 30. [Environment variables](#environment-variables)
+31. [refine](#refine)
 
 ## Curly brackets and map
 
@@ -618,6 +619,37 @@ ENV['FOO'] # => "test"
 ```
 
 > Setting environment variables in a terminal will last for that session only. To set it permanently add the command to your `~/.profile` file of your machine.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Refine
+
+You can use refinements to affect core behavior. The effect of refinement is temporary and stops when the class in which we are using the refinement ends.
+
+e.g:
+
+```ruby
+module Speak
+  refine String do
+    def shout
+      self.upcase
+    end
+  end
+end
+
+class Person
+  attr_accessor :name
+  
+  using Speak
+  def announce
+    puts "Announcing: #{name.shout}"
+  end
+end
+
+apostolis = Person.new
+apostolis.name = 'Apostolis'
+apostolis.announce # => Announcing APOSTOLIS
+```
 
 **[⬆ back to top](#table-of-contents)**
 
