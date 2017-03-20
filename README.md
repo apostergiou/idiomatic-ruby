@@ -35,6 +35,7 @@ A collection of Ruby idioms and patterns.
 29. [tap](#tap)
 30. [Environment variables](#environment-variables)
 31. [refine](#refine)
+32. [proc method](#proc-method)
 
 ## Curly brackets and map
 
@@ -649,6 +650,19 @@ end
 apostolis = Person.new
 apostolis.name = 'Apostolis'
 apostolis.announce # => Announcing APOSTOLIS
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Proc method
+
+The `proc` method takes a block and returns a Proc object. Thus, you can use it
+instead of `Proc.new` and get the same result.
+
+```ruby
+proc { puts 'Hello world!' }
+
+Proc.new  { puts 'Hello world' }
 ```
 
 **[⬆ back to top](#table-of-contents)**
