@@ -36,6 +36,7 @@ A collection of Ruby idioms and patterns.
 - [Environment variables](#environment-variables)
 - [refine](#refine)
 - [proc method](#proc-method)
+- [callable objects](#callable-objects)
 
 ## Curly brackets and map
 
@@ -663,6 +664,22 @@ instead of `Proc.new` and get the same result.
 proc { puts 'Hello world!' }
 
 Proc.new  { puts 'Hello world' }
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Callable objects
+
+Ruby provides some alternatives in using the `call` method to call callable objects:
+
+```ruby
+mult = lambda {|x,y| x * y }
+
+# If there are no arguments, leave the brackets empty
+twelve = mult[3,4]
+
+# You can also call callable objects using the () method
+twelve = mult.(3,4)
 ```
 
 **[⬆ back to top](#table-of-contents)**
