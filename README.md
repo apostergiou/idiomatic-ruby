@@ -203,6 +203,14 @@ Nevertheless, for multi-line comments, it is common to use:
 # are written this way
 ```
 
+Ruby 2.3 introduced heredoc with a tilde:
+
+```ruby
+<<~DOC
+  Cleaner indentation and no extra spaces printed
+DOC
+```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Syntactic sugar
