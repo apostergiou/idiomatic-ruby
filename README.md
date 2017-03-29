@@ -1,6 +1,6 @@
-# :computer: Idiomatic-ruby
+# :computer: Idiomatic ruby
 
-A collection of Ruby idioms and patterns.
+A collection Ruby patterns, techniques, tips and tricks.
 
 ## Table of Contents
 
