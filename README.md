@@ -37,6 +37,7 @@ A collection Ruby patterns, techniques, tips and tricks.
 - [refine](#refine)
 - [proc method](#proc-method)
 - [callable objects](#callable-objects)
+- [file paths](#file-paths)
 
 ## Curly brackets and map
 
@@ -689,6 +690,34 @@ twelve = mult[3,4]
 # You can also call callable objects using the () method
 twelve = mult.(3,4)
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## File paths
+
+Ruby implements a `File::expand_path` method which you can use to obtain the full path to the desired file.
+
+For example let's suppose we want the `views/hello_world.erb` path and we have a file structure like this:
+
+my_framework/
+ ├── Gemfile
+ ├── Gemfile.lock
+ ├── config.ru
+ ├── hello_world.rb
+ ├── advice.rb
+ └── views/
+        ├── index.erb
+        ├── advice.erb
+        └── not_found.erb
+
+In this case we could use the `File::expand_path` method.
+
+```ruby
+
+```
+
+Here `__FILE__` returns the relative path to the current file(`hello_world.rb`). This will give us the path ``.
+We will use this path as a starting point to find the full path. So, we append the `` path to get the full path to our file(``).
 
 **[⬆ back to top](#table-of-contents)**
 
