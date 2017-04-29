@@ -38,6 +38,7 @@ A collection Ruby patterns, techniques, tips and tricks.
 - [proc method](#proc-method)
 - [callable objects](#callable-objects)
 - [file paths](#file-paths)
+- [and operator](#and-operator)
 
 ## Curly brackets and map
 
@@ -718,6 +719,16 @@ In this case we could use the `File::expand_path` method.
 
 Here `__FILE__` returns the relative path to the current file(`hello_world.rb`). This will give us the path ``.
 We will use this path as a starting point to find the full path. So, we append the `` path to get the full path to our file(``).
+
+**[⬆ back to top](#table-of-contents)**
+
+## and operator
+
+Because `and` has a lower precedence than `=` after the following statement, foo is equal to true:
+
+```ruby
+foo = true and false
+```
 
 **[⬆ back to top](#table-of-contents)**
 
