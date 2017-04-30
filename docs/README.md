@@ -7,7 +7,6 @@ the lib folder.
 
 - [Curly brackets and map](#curly-brackets-and-map)
 - [Keyword arguments](#keyword-arguments)
-- [Singleton class](#singleton-class)
 - [Local variables on the go](#local-variables-on-the-go)
 - [Exception raising](#exception-raising)
 - [Literal constructors](#literal-constructors)
@@ -57,14 +56,6 @@ foo(true)             # => ArgumentError: missing keyword: bar
 foo(true, 'baz')      # => ArgumentError: missing keyword: bar
 foo(true, bar: 'baz') # => 'baz'
 ```
-
-**[⬆ back to top](#table-of-contents)**
-
-## Singleton class
-
-Similar names in the community: singleton class - metaclass - eigenclass
-
-The `class << foo` syntax opens up foo's singleton class, so you can specify methods for a *particular object*. For example `class << self` opens up self's singleton class, so that methods can be defined for the current self object.
 
 **[⬆ back to top](#table-of-contents)**
 
