@@ -12,6 +12,32 @@ There are 4 types of closures in Ruby:
 
 A simple explanation of closures: Closures are ways of grouping and packaging code we want to run at a later point.
 
+
+## Proc method
+
+The `proc` method takes a block and returns a Proc object. Thus, you can use it
+instead of `Proc.new` and get the same result.
+
+```ruby
+proc { puts 'Hello world!' }
+
+Proc.new  { puts 'Hello world' }
+```
+
+## Callable objects
+
+Ruby provides some alternatives in using the `call` method to call callable objects:
+
+```ruby
+mult = lambda {|x,y| x * y }
+
+# If there are no arguments, leave the brackets empty
+twelve = mult[3,4]
+
+# You can also call callable objects using the () method
+twelve = mult.(3,4)
+```
+
 ## Differences between Blocks and Procs
 
 - Procs are objects
@@ -45,4 +71,3 @@ p.call(1, 2) # => returns nil
 ## Methods as closures
 
 The method `method` makes methods usable in place of blocks, procs and lambdas.
-
