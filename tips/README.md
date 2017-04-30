@@ -381,23 +381,29 @@ Ruby implements a `File::expand_path` method which you can use to obtain the ful
 For example let's suppose we want the `views/hello_world.erb` path and we have a file structure like this:
 
 my_framework/
+
  ├── Gemfile
+ 
  ├── Gemfile.lock
+ 
  ├── config.ru
+ 
  ├── hello_world.rb
- ├── advice.rb
+  
  └── views/
+ 
         ├── index.erb
-        ├── advice.erb
+        ├── hello_world.erb        
         └── not_found.erb
 
 In this case we could use the `File::expand_path` method.
 
 ```ruby
-
+path = File.expand_path("../hello_world.rb", __FILE__)
+# => "/home/user/my_framework/views/hello_world.erb"
 ```
 
-Here `__FILE__` returns the relative path to the current file(`hello_world.rb`). This will give us the path ``.
-We will use this path as a starting point to find the full path. So, we append the `` path to get the full path to our file(``).
+Above we can see that `__FILE__` returns the relative path to the current file(`index.erb`). This will give us the path `/path/to/my_framework/index.erb`.
+So we use this path as a starting point to find the full path.
 
 **[⬆ back to top](#table-of-contents)**
