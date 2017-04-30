@@ -2,6 +2,12 @@
 
 A collection Ruby patterns, techniques, tips and tricks.
 
+## Table of Contents
+
+- [tips](https://github.com/apostergiou/idiomatic-ruby/tree/master/tips)
+- [code-examples](https://github.com/apostergiou/idiomatic-ruby/tree/master/lib)
+- [idioms](https://github.com/apostergiou/idiomatic-ruby/tree/master/docs)
+
 ## Resources
 
 - [Stackoverflow ruby questions](http://stackoverflow.com/questions/tagged/ruby)
