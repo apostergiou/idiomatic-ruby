@@ -29,8 +29,6 @@ the lib folder.
 - [Printing](#printing)
 - [Class variable access](#class-variable-access)
 - [Environment variables](#environment-variables)
-- [proc method](#proc-method)
-- [callable objects](#callable-objects)
 - [file paths](#file-paths)
 - [and operator](#and-operator)
 
@@ -536,35 +534,6 @@ ENV['FOO'] # => "test"
 ```
 
 > Setting environment variables in a terminal will last for that session only. To set it permanently add the command to your `~/.profile` file of your machine.
-
-**[⬆ back to top](#table-of-contents)**
-
-## Proc method
-
-The `proc` method takes a block and returns a Proc object. Thus, you can use it
-instead of `Proc.new` and get the same result.
-
-```ruby
-proc { puts 'Hello world!' }
-
-Proc.new  { puts 'Hello world' }
-```
-
-**[⬆ back to top](#table-of-contents)**
-
-## Callable objects
-
-Ruby provides some alternatives in using the `call` method to call callable objects:
-
-```ruby
-mult = lambda {|x,y| x * y }
-
-# If there are no arguments, leave the brackets empty
-twelve = mult[3,4]
-
-# You can also call callable objects using the () method
-twelve = mult.(3,4)
-```
 
 **[⬆ back to top](#table-of-contents)**
 
