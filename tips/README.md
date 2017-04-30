@@ -393,7 +393,7 @@ my_framework/
  └── views/
  
         ├── index.erb
-        ├── hello_world.erb        
+        ├── hello_world.erb
         └── not_found.erb
 
 In this case we could use the `File::expand_path` method.
