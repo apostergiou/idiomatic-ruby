@@ -16,6 +16,7 @@
 - [Method missing](#method-missing)
 - [Environment variables](#environment-variables)
 - [file paths](#file-paths)
+- [puts multiple lines](#puts-multiple-lines)
 
 ## Keyword arguments
 
@@ -383,15 +384,15 @@ For example let's suppose we want the `views/hello_world.erb` path and we have a
 my_framework/
 
  ├── Gemfile
- 
+
  ├── Gemfile.lock
- 
+
  ├── config.ru
- 
+
  ├── hello_world.rb
-  
+
  └── views/
- 
+
         ├── index.erb
         ├── hello_world.erb
         └── not_found.erb
@@ -405,5 +406,22 @@ path = File.expand_path("../hello_world.rb", __FILE__)
 
 Above we can see that `__FILE__` returns the relative path to the current file(`index.erb`). This will give us the path `/path/to/my_framework/index.erb`.
 So we use this path as a starting point to find the full path.
+
+**[⬆ back to top](#table-of-contents)**
+
+## puts multiple lines
+
+You can use `puts` to print strings in different lines:
+
+```ruby
+puts " ", "Hello!", "Hello World!"
+
+<<~OUTPUT
+
+Hello!
+Hello World!
+=> nil
+OUTPUT
+```
 
 **[⬆ back to top](#table-of-contents)**
