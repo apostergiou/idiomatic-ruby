@@ -17,6 +17,8 @@
 - [Environment variables](#environment-variables)
 - [file paths](#file-paths)
 - [puts multiple lines](#puts-multiple-lines)
+- [array](#array)
+- [range iteration](#range-iteration)
 
 ## Keyword arguments
 
@@ -422,6 +424,30 @@ Hello!
 Hello World!
 => nil
 OUTPUT
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Array
+
+We can create an Array with specified size and initialized with a value:
+
+```ruby
+Array.new(9, 0)
+=> [0, 0, 0, 0, 0, 0, 0, 0, 0]
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Range Iteration
+
+We can use the `#step` method to iterate over a range:
+
+```ruby
+range = (1..10)
+range.step(2) { |x| puts x } # => 1, 3, 5, 7, 9
+puts
+range.step(3) { |x| puts x } # => 1, 4, 7, 10
 ```
 
 **[⬆ back to top](#table-of-contents)**
