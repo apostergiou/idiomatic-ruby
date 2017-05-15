@@ -1,4 +1,4 @@
-# STL examples
+# Core methods and examples
 
 ## Table of Contents
 
