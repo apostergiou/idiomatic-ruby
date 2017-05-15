@@ -9,6 +9,7 @@
 - [alias vs alias_method](#alias-vs-alias_method)
 - [tap](#tap)
 - [refine](#refine)
+- [warn](#warn)
 
 ## Set
 
@@ -125,6 +126,16 @@ end
 apostolis = Person.new
 apostolis.name = 'Apostolis'
 apostolis.announce # => Announcing APOSTOLIS
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Warn
+
+You can use warn to print a warning message to STDERR.
+
+```ruby
+warn 'Error!' # => Error!
 ```
 
 **[⬆ back to top](#table-of-contents)**
