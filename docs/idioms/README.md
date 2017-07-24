@@ -14,6 +14,7 @@
 - [Equality](#equality)
 - [proc idiom](#proc-idiom)
 - [super](#super)
+- [new](#new)
 
 ## Curly brackets and map
 
@@ -178,7 +179,30 @@ using the brackets notation.
 -> (x) {p x}.call("foo")
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Super
 
 `super` calls the parent method with the same arguments
 `super()` calls the parent method with no arguments
+
+**[⬆ back to top](#table-of-contents)**
+
+## new
+
+```ruby
+class Foo
+  def x
+    p 'hello'
+  end
+end
+
+Foo::new::x
+Foo::new.x
+Foo.new::x
+Foo.new.x
+
+# => All evaluate to "hello"
+```
+
+**[⬆ back to top](#table-of-contents)**
