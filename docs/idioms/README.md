@@ -12,6 +12,8 @@
 - [Class variable access](#class-variable-access)
 - [Printing](#printing)
 - [Equality](#equality)
+- [proc idiom](#proc-idiom)
+- [super](#super)
 
 ## Curly brackets and map
 
@@ -163,3 +165,20 @@ Triple equals `===` means different things depending on the class which implemen
 In many cases it is an alias for `==`.
 
 **[⬆ back to top](#table-of-contents)**
+
+## Proc idiom
+
+The following will define a proc, which takes on parameter(x) and is executed
+using the brackets notation.
+
+```ruby
+-> (x) {p x}["foo"]
+
+# alternatively
+-> (x) {p x}.call("foo")
+```
+
+## Super
+
+`super` calls the parent method with the same arguments
+`super()` calls the parent method with no arguments
