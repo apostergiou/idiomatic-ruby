@@ -97,6 +97,13 @@ foo = 'Hello World'.tap { |s| p s.upcase }.reverse
 p foo # Prints "dlroW olleH"
 ```
 
+The primary purpose of the method is to perform operations on intermediate results of a method chain:
+
+```ruby
+(1..5).tap { |x| puts "original: #{x}" }.
+  map { |x| x * x }. tap { |x| puts "squares: #{x}" }
+```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Refine
