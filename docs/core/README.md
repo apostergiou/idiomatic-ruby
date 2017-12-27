@@ -146,3 +146,9 @@ warn 'Error!' # => Error!
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+## Syntax checking
+
+`$ ruby -c file.rb`
+
+**[⬆ back to top](#table-of-contents)**
