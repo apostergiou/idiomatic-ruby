@@ -15,6 +15,13 @@ $ tree .
 │   │   └── README.md
 │   └── README.md
 ├── lib
+│   ├── binding.rb
+│   ├── cat
+│   │   ├── cat_argf.rb
+│   │   ├── cat_argv.rb
+│   │   ├── f1.txt
+│   │   ├── f2.txt
+│   │   └── README.md
 │   ├── class_annotation.rb
 │   ├── closures
 │   │   ├── methods.rb
@@ -24,12 +31,14 @@ $ tree .
 │   ├── enumerable
 │   │   ├── examples.rb
 │   │   └── README.md
+│   ├── exceptions.rb
 │   ├── factorial.rb
 │   ├── fibers
 │   │   └── README.md
 │   ├── inject_examples.rb
 │   ├── README.md
 │   ├── reduce_examples.rb
+│   ├── respond_to_missing.rb
 │   ├── singleton
 │   │   ├── everyday_singleton.rb
 │   │   ├── README.md
