@@ -19,6 +19,7 @@
 - [puts multiple lines](#puts-multiple-lines)
 - [array](#array)
 - [range iteration](#range-iteration)
+- [string mutation](#string-mutation)
 
 ## Keyword arguments
 
@@ -448,6 +449,24 @@ range = (1..10)
 range.step(2) { |x| puts x } # => 1, 3, 5, 7, 9
 puts
 range.step(3) { |x| puts x } # => 1, 4, 7, 10
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## String Mutation
+
+```ruby
+arr = []
+s = 'abcd'
+arr << s
+s[0], s[1] = s[1], s[0]
+p arr # => ["bacd"]
+
+arr = []
+s = 'abcd'
+arr << s.dup
+s[0], s[1] = s[1], s[0]
+p arr # => ["abcd"]
 ```
 
 **[⬆ back to top](#table-of-contents)**
